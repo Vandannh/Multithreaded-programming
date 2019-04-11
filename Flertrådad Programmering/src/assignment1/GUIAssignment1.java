@@ -63,6 +63,8 @@ public class GUIAssignment1 implements ActionListener
 		}
 	}
 	
+	
+	
 	public void moveText() {
 		int y = new Random().nextInt(200-lblMoving.getHeight());
 		int x = new Random().nextInt(200-lblMoving.getWidth());
@@ -71,14 +73,10 @@ public class GUIAssignment1 implements ActionListener
 
 	public void actionPerformed(ActionEvent e) {
 		if(e.getSource() == btnDisplay) {
-			btnDisplay.setEnabled(false);
-			btnDStop.setEnabled(true);
 			tt = new TextThread();
 			tt.start();
 		}
 		if(e.getSource() == btnDStop) {
-			btnDisplay.setEnabled(true);
-			btnDStop.setEnabled(false);
 			tt.toggleRunning();
 		}
 	}
